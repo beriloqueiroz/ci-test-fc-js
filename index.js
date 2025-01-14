@@ -41,4 +41,9 @@ function whatIsTriadAccord(a, b, c) {
   }
 }
 
+//todo make this method
+function verifyWithAnyOrder(a, b, c) {
+  return a
+}
+
 module.exports = whatIsTriadAccord;
