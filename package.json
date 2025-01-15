@@ -1,7 +1,7 @@
 {
   "name": "ci-test-fc",
   "version": "1.0.0",
-  "description": "***Projeto de exemplo de pipeline com o Git hub actions***",
+  "description": "***Projeto de identificação de notas e acordes***",
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
