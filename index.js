@@ -4,20 +4,19 @@ const flatsToSharps = {
   'Db': 'C#', 'Eb': 'D#', 'Gb': 'F#', 'Ab': 'G#', 'Bb': 'A#'
 };
 const sharpsToFlats = Object.fromEntries(Object.entries(flatsToSharps).map(([k, v]) => [v, k]));
+const steps = {
+  major: [0, 4, 7], // Tônica, terça maior, quinta justa
+  minor: [0, 3, 7], // Tônica, terça menor, quinta justa
+  diminished: [0, 3, 6], // Tônica, terça menor, quinta diminuta
+  augmented: [0, 4, 8], // Tônica, terça maior, quinta aumentada
+  seventh: [0, 4, 7, 10], // Tônica, terça maior, quinta justa, sétima menor
+  "minor seventh": [0, 3, 7, 10], // Tônica, terça menor, quinta justa, sétima menor
+  "major seventh": [0, 4, 7, 11], // Tônica, terça maior, quinta justa, sétima maior
+  sus2: [0, 2, 7], // Tônica, segunda maior, quinta justa
+  sus4: [0, 5, 7] // Tônica, quarta justa, quinta justa
+};
 
 function getChord(root, type = "major") {
-  const steps = {
-    major: [0, 4, 7], // Tônica, terça maior, quinta justa
-    minor: [0, 3, 7], // Tônica, terça menor, quinta justa
-    diminished: [0, 3, 6], // Tônica, terça menor, quinta diminuta
-    augmented: [0, 4, 8], // Tônica, terça maior, quinta aumentada
-    seventh: [0, 4, 7, 10], // Tônica, terça maior, quinta justa, sétima menor
-    "minor seventh": [0, 3, 7, 10], // Tônica, terça menor, quinta justa, sétima menor
-    "major seventh": [0, 4, 7, 11], // Tônica, terça maior, quinta justa, sétima maior
-    sus2: [0, 2, 7], // Tônica, segunda maior, quinta justa
-    sus4: [0, 5, 7] // Tônica, quarta justa, quinta justa
-  };
-
   let hasFlats = false;
   // Converte bemol para sustenido, se necessário
   if (flatsToSharps[root]) {
@@ -39,18 +38,6 @@ function getChord(root, type = "major") {
 
 
 function identifyChord(noteList) {
-  const steps = {
-    major: [0, 4, 7],
-    minor: [0, 3, 7],
-    diminished: [0, 3, 6],
-    augmented: [0, 4, 8],
-    seventh: [0, 4, 7, 10],
-    "minor seventh": [0, 3, 7, 10],
-    "major seventh": [0, 4, 7, 11],
-    sus2: [0, 2, 7],
-    sus4: [0, 5, 7]
-  };
-
   // Converte bemóis para sustenidos, se necessário
   noteList = noteList.map(note => flatsToSharps[note] || note);
   const result = [];
