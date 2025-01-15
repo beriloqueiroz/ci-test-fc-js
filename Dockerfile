@@ -4,6 +4,6 @@ WORKDIR /home/node/app
 COPY package.json package.json
 USER node
 RUN npm install --ignore-scripts
-COPY --chown=node:node --chmod=755 index.js index.js
-COPY --chown=node:node --chmod=755 example.js example.js
+COPY --chown=root:root --chmod=755 index.js index.js
+COPY --chown=root:root --chmod=755 example.js example.js
 CMD [ "npm","run", "example"]
