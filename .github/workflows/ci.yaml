@@ -40,4 +40,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: beriloqueiroz/ci-test-fc:latest
+          tags: beriloqueiroz/ci-test-fc-js:latest
