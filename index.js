@@ -47,7 +47,7 @@ function identifyChord(noteList) {
 
     for (const [chordType, intervals] of Object.entries(steps)) {
       if (JSON.stringify(normalized) === JSON.stringify(intervals)) {
-        result.push(`${root}${sharpsToFlats[root] ? ` (${sharpsToFlats[root]})` : ""} ${chordType}`);
+        result.push(root && sharpsToFlats[root] ? ` (${sharpsToFlats[root]})` : "" + chordType);
       }
     }
   }
