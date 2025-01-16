@@ -23,7 +23,7 @@ jobs:
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@master
         with:
-          projectBaseDir: ./
+          projectBaseDir: .
           fetch-depth: 0
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
