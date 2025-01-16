@@ -31,38 +31,38 @@ describe('Chord Identification and Generation', () => {
     });
   });
 
-  // describe('getChord function', () => {
-  //   it('should generate C major', () => {
-  //     expect(getChord('C', 'major')).toEqual(['C', 'E', 'G']);
-  //     expect(getChord('C')).toEqual(['C', 'E', 'G']);
-  //   });
+  describe('getChord function', () => {
+    it('should generate C major', () => {
+      expect(getChord('C', 'major')).toEqual(['C', 'E', 'G']);
+      expect(getChord('C')).toEqual(['C', 'E', 'G']);
+    });
 
-  //   it('should generate A minor', () => {
-  //     expect(getChord('A', 'minor')).toEqual(['A', 'C', 'E']);
-  //   });
+    it('should generate A minor', () => {
+      expect(getChord('A', 'minor')).toEqual(['A', 'C', 'E']);
+    });
 
-  //   it('should generate Ab major', () => {
-  //     expect(getChord('Ab', 'major')).toEqual(['Ab', 'C', 'Eb']);
-  //   });
+    it('should generate Ab major', () => {
+      expect(getChord('Ab', 'major')).toEqual(['Ab', 'C', 'Eb']);
+    });
 
-  //   it('should generate B diminished', () => {
-  //     expect(getChord('B', 'diminished')).toEqual(['B', 'D', 'F']);
-  //   });
+    it('should generate B diminished', () => {
+      expect(getChord('B', 'diminished')).toEqual(['B', 'D', 'F']);
+    });
 
-  //   it('should generate F augmented', () => {
-  //     expect(getChord('F', 'augmented')).toEqual(['F', 'A', 'C#']);
-  //   });
+    it('should generate F augmented', () => {
+      expect(getChord('F', 'augmented')).toEqual(['F', 'A', 'C#']);
+    });
 
-  //   it('should generate G seventh', () => {
-  //     expect(getChord('G', 'seventh')).toEqual(['G', 'B', 'D', 'F']);
-  //   });
+    it('should generate G seventh', () => {
+      expect(getChord('G', 'seventh')).toEqual(['G', 'B', 'D', 'F']);
+    });
 
-  //   it('should throw error for invalid root note', () => {
-  //     expect(() => getChord('H', 'major')).toThrow('Invalid root note: H');
-  //   });
+    it('should throw error for invalid root note', () => {
+      expect(() => getChord('H', 'major')).toThrow('Invalid root note: H');
+    });
 
-  //   it('should throw error for unknown chord type', () => {
-  //     expect(() => getChord('C', 'unknown')).toThrow('Unknown chord type: unknown');
-  //   });
-  // });
+    it('should throw error for unknown chord type', () => {
+      expect(() => getChord('C', 'unknown')).toThrow('Unknown chord type: unknown');
+    });
+  });
 });
