@@ -23,10 +23,11 @@ jobs:
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@master
         with:
-          projectBaseDir: .
+          projectBaseDir: /
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   docker-build-push:
+    needs: [build, sonar]
     runs-on: ubuntu-latest
     steps:
       - name: Set up QEMU
