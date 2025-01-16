@@ -1,10 +1,10 @@
 # Projeto de identificação de notas e acordes
 
-# introdução
+## introdução
 
 - Este repositório implementa basicamente duas funções, uma que retorna o acorde com base nas notas fornecidas, e um que retorna as notas a depender do acorde fornecido.
 
-# tecnologia
+## tecnologia
 
 - Foram utilizados:
   - javascript/nodejs
@@ -12,7 +12,7 @@
   - esteira de ci/cd
     - build, lint, sonar cloud, docker build and push on dockerhub
 
-# exemplo de uso
+## exemplo de uso
 
 - arquivo exemplo.js
 
